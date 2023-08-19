@@ -1,6 +1,6 @@
 <?php
-    include('inc/db.php');
-    include('inc/meta.php');
+    require('../inc/meta.php');
+    require_once('../config/functions.php');
 ?>
 <body>
 <!-- Layout wrapper -->

@@ -1,7 +1,5 @@
 <?php
-require_once('../config/db.php');
 require('../views/admin/inc/meta.php');
-require_once('../config/functions.php');
 ?>
 <body>
 <!-- Layout wrapper -->
