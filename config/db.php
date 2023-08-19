@@ -9,7 +9,7 @@ try {
     $con = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//        $sql = "CREATE TABLE MyGuests (
+    //        $sql = "CREATE TABLE MyGuests (
 //          id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 //          firstname VARCHAR(30) NOT NULL,
 //          lastname VARCHAR(30) NOT NULL,
@@ -24,8 +24,6 @@ try {
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
-
-$con = null;
 
 
 

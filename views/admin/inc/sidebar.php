@@ -57,13 +57,13 @@
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
         <li class="menu-item active">
-            <a href="index.php" class="menu-link ">
+            <a href="views/admin/dashboard.php" class="menu-link ">
                 <i class='menu-icon bx bxs-home' ></i>
                 <div data-i18n="İdarə paneli">İdarə paneli</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="neüs.php" class="menu-link ">
+            <a href="views/admin/news/index.php" class="menu-link ">
                 <i class='menu-icon bx bxs-news' ></i>
                 <div data-i18n="Xəbərlər">Xəbərlər</div>
             </a>

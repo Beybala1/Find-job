@@ -1,7 +1,7 @@
 <?php
 require_once('../config/db.php');
 require('../views/admin/inc/meta.php');
-require ('../config/functions.php');
+require_once('../config/functions.php');
 ?>
 <body>
 <!-- Layout wrapper -->
@@ -46,9 +46,13 @@ require ('../config/functions.php');
                                             </div>
                                             <div class="mt-sm-auto">
                                                 <h4 class="text-success text-nowrap fw-semibold">
-                                                    <?php
-//                                                        count_("customers");
-                                                    ?>
+                                                    <div class="mt-sm-auto">
+                                                        <h4 class="text-success text-nowrap fw-semibold">
+                                                            <?php
+                                                                count_("customers");
+                                                            ?>
+                                                        </h4>
+                                                    </div>
                                                 </h4>
                                             </div>
                                         </div>
