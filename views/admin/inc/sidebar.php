@@ -2,7 +2,6 @@
     <div class="app-brand demo ">
         <a href="index-2.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-
                 <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>
@@ -57,13 +56,13 @@
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
         <li class="menu-item active">
-            <a href="views/admin/dashboard.php" class="menu-link ">
-                <i class='menu-icon bx bxs-home' ></i>
-                <div data-i18n="İdarə paneli">İdarə paneli</div>
+            <a href="<?= asset('admin/dashboard.php') ?>" class="menu-link">
+                <i class='menu-icon bx bxs-home'></i>
+                <div data-i18n="Dashboard">Dashboard</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="views/admin/news/index.php" class="menu-link ">
+            <a href="<?= asset('admin/news/index.php') ?>" class="menu-link ">
                 <i class='menu-icon bx bxs-news' ></i>
                 <div data-i18n="Xəbərlər">Xəbərlər</div>
             </a>
