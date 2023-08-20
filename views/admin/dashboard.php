@@ -1,6 +1,8 @@
 <?php
+$title = "Ana səhifə";
 require('../views/admin/inc/meta.php');
 ?>
+<!--<title>Ana səhifə</title>-->
 <body>
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar  ">
@@ -25,6 +27,7 @@ require('../views/admin/inc/meta.php');
                                             <div class="mt-sm-auto">
                                                 <h4 class="text-success text-nowrap fw-semibold">
                                                     <?php
+                                                        //count_ - config/functions.php
                                                         count_('users');
                                                     ?>
                                                 </h4>

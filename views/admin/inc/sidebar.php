@@ -58,7 +58,7 @@
         <li class="menu-item active">
             <a href="<?= asset('admin/dashboard.php') ?>" class="menu-link">
                 <i class='menu-icon bx bxs-home'></i>
-                <div data-i18n="Dashboard">Dashboard</div>
+                <div data-i18n="Ana səhifə">Ana səhifə</div>
             </a>
         </li>
         <li class="menu-item">
