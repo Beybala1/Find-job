@@ -1,15 +1,15 @@
 <?php
-    require('../inc/meta.php');
-    require_once('../config/functions.php');
+    $title = "Xəbərlər";
+    require('../views/admin/inc/meta.php');
 ?>
 <body>
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar  ">
     <div class="layout-container">
-        <?php include('inc/sidebar.php')  ?>
+        <?php include('../views/admin/inc/sidebar.php')  ?>
         <!-- Layout container -->
         <div class="layout-page">
-            <?php include('inc/header.php')  ?>
+            <?php include('../views/admin/inc/header.php')  ?>
             <!-- Content wrapper -->
             <div class="content-wrapper">
                 <!-- Content -->
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <!-- / Content -->
-                <?php include('inc/footer.php') ?>
+                <?php include('../views/admin/inc/footer.php') ?>
             </div>
             <!-- Content wrapper -->
         </div>
@@ -50,6 +50,6 @@
     <div class="drag-target"></div>
 </div>
 <!-- / Layout wrapper -->
-<?php include('inc/script.php') ?>
+<?php include('../views/admin/inc/script.php') ?>
 </body>
 </html>
