@@ -9,3 +9,21 @@ RewriteRule ^public/(.*)$ public/$1 [L]
 
 # Rewrite other requests to your front controller (public/index.php)
 RewriteRule ^(.*)$ public/index.php [L]
+
+#RewriteEngine On
+#
+## Redirect requests for /<subdirectory>/assets/ to the public/<subdirectory>/assets/ directory
+#RewriteRule ^([^/]+)/assets/(.*)$ public/$1/assets/$2 [L]
+#
+## Rewrite requests for assets directly in /public/ to the public/ directory
+#RewriteCond %{REQUEST_URI} ^/public/(.*\.(css|js|png|jpg|gif))$
+#RewriteRule ^public/(.*)$ public/$1 [L]
+#
+## Rewrite requests like /<subdirectory>/news/index to public/index.php?page=<subdirectory>/news/index
+#RewriteRule ^([^/]+)/([^/]+)/([^/]+)$ public/index.php?page=$1/$2/$3 [L,QSA]
+#
+## Rewrite other requests to your front controller (public/index.php)
+#RewriteRule ^(.*)$ public/index.php [L]
+
+
+

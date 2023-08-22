@@ -54,8 +54,7 @@
         </a>
     </div>
     <ul class="menu-inner py-1">
-        <!-- Dashboards -->
-                <li class="menu-item <?= $page === 'dashboard' ? 'active' : '' ?>">
+                        <li class="menu-item <?= $page === 'dashboard' ? 'active' : '' ?>">
                     <a href="<?= asset('admin/index.php?page=dashboard') ?>" class="menu-link">
                         <i class='menu-icon bx bxs-home'></i>
                         <div data-i18n="Ana səhifə">Ana səhifə</div>
@@ -67,18 +66,5 @@
                         <div data-i18n="Xəbərlər">Xəbərlər</div>
                     </a>
                 </li>
-
-        <!--        <li class="menu-item active">-->
-<!--            <a href="--><?php //= asset('admin/dashboard.php') ?><!--" class="menu-link">-->
-<!--                <i class='menu-icon bx bxs-home'></i>-->
-<!--                <div data-i18n="Ana səhifə">Ana səhifə</div>-->
-<!--            </a>-->
-<!--        </li>-->
-<!--        <li class="menu-item">-->
-<!--            <a href="--><?php //= asset('admin/news/index.php') ?><!--" class="menu-link ">-->
-<!--                <i class='menu-icon bx bxs-news' ></i>-->
-<!--                <div data-i18n="Xəbərlər">Xəbərlər</div>-->
-<!--            </a>-->
-<!--        </li>-->
     </ul>
 </aside>

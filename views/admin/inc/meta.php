@@ -7,11 +7,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <!-- Fonts -->
-    <title>
-        <?php
-            echo $title ?? "Admin panel";
-        ?>
-    </title>
+    <title> <?= $title ?? "Admin panel"; ?> </title>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
@@ -30,4 +28,12 @@
     <script src="<?= asset('admin/assets/vendor/js/helpers.js') ?>"></script>
     <script src="<?= asset('admin/assets/vendor/js/template-customizer.js') ?>"></script>
     <script src="<?= asset('admin/assets/js/config.js') ?>"></script>
+    <!-- Datatable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css">
+    <style>
+        .flex-wrap{
+            margin-top: 17px
+        }
+    </style>
 </head>
