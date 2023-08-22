@@ -17,6 +17,12 @@
                     <div class="card">
                         <h5 class="card-header">Bloglar</h5>
                         <div class="container">
+                            <a href="<?= asset('admin/index.php?page=news/create') ?>" class="btn btn-success create-new btn-primary mb-3" tabindex="0">
+                                <span>
+                                    <i class="bx bx-plus me-sm-1"></i>
+                                    <span class="d-none d-sm-inline-block">Daxil et</span>
+                                </span>
+                            </a>
                             <div class="table-responsive text-nowrap">
                                 <table id="table" class="table table-striped">
                                     <thead>
