@@ -20,6 +20,15 @@ function count_($table): void
     echo $row_count;
  }
 
+function get($table): bool|array
+{
+    global $con;
+    $stmt = $con->prepare("SELECT * FROM $table");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 
 
 

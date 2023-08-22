@@ -1,5 +1,5 @@
 <?php
-    $title = "Xəbərlər";
+    $title = "Bloglar";
     require('../views/admin/inc/meta.php');
 ?>
 <body>
@@ -15,27 +15,51 @@
                 <!-- Content -->
                 <div class="container-xxl flex-grow-1 container-p-y">
                     <div class="card">
-                        <h5 class="card-header">Responsive Table</h5>
+                        <h5 class="card-header">Bloglar</h5>
                         <div class="container">
                             <div class="table-responsive text-nowrap">
                                 <table id="table" class="table table-striped">
                                     <thead>
                                     <tr class="text-nowrap">
                                         <th>#</th>
-                                        <th>Table heading</th>
-                                        <th>Table heading</th>
-                                        <th>Table heading</th>
-                                        <th>Table heading</th>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Content</th>
+                                        <th>Slug</th>
+                                        <th>Alt</th>
+                                        <th>Created at</th>
+                                        <th>Updated at</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                    </tr>
+                                    <?php
+                                        //Get all data from table
+                                        //To understand this part, please read the snippet from config\functions.php
+                                        //line 23-29
+                                        $blogs = get('blogs');
+                                    ?>
+                                    <?php foreach ($blogs as $blog): ?>
+                                        <tr>
+                                            <th scope="row"><?php echo $blog['id']; ?></th>
+                                            <td>
+                                                <div class="d-flex justify-content-left align-items-center">
+                                                    <div class="avatar-wrapper">
+                                                        <div class="avatar avatar-sm me-3">
+                                                            <span class="avatar-initial rounded-circle bg-label-dark">
+                                                                <img src="<?php echo asset($blog['image']); ?>">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><?php echo $blog['title']; ?></td>
+                                            <td><?php echo $blog['content']; ?></td>
+                                            <td><?php echo $blog['slug']; ?></td>
+                                            <td><?php echo $blog['alt']; ?></td>
+                                            <td><?php echo $blog['created_at']; ?></td>
+                                            <td><?php echo $blog['updated_at']; ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

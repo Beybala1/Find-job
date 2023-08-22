@@ -50,7 +50,7 @@ require('../views/admin/inc/meta.php');
                                                     <div class="mt-sm-auto">
                                                         <h4 class="text-success text-nowrap fw-semibold">
                                                             <?php
-                                                                count_("customers");
+                                                                count_("blogs");
                                                             ?>
                                                         </h4>
                                                     </div>

@@ -9,17 +9,19 @@ try {
     $con = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //        $sql = "CREATE TABLE MyGuests (
-//          id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//          firstname VARCHAR(30) NOT NULL,
-//          lastname VARCHAR(30) NOT NULL,
-//          email VARCHAR(50),
-//          reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-//        )";
+//    $sql = "CREATE TABLE blogs (
+//        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//        title VARCHAR(255) NOT NULL,
+//        content LONGTEXT NOT NULL,
+//        slug VARCHAR(255) NOT NULL,
+//        alt VARCHAR(255),
+//        image TEXT,
+//        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+//        updated_at TIMESTAMP
+//    )";
 //
-//        // use exec() because no results are returned
-//        $conn->exec($sql);
-//        echo "Table MyGuests created successfully";
+//    $con->exec($sql);
+//    echo "Table MyGuests created successfully";
 
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
