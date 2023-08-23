@@ -52,7 +52,7 @@
                                                     <div class="avatar-wrapper">
                                                         <div class="avatar avatar-sm me-3">
                                                             <span class="avatar-initial rounded-circle bg-label-dark">
-                                                                <img src="<?php echo asset($blog['image']); ?>">
+                                                                <img src="<?php echo asset('public/'.$blog['image']); ?>">
                                                             </span>
                                                         </div>
                                                     </div>
