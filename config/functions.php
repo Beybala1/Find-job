@@ -33,36 +33,84 @@ function get($table): bool|array
 }
 
 //Secure form data
-function csrf($input) {
+function csrf($input): string
+{
     return isset($input) ? trim(htmlspecialchars($input)) : '';
 }
 
 //Insert data into a table
-function insert($table, $data)
+function insert($table, $data): string
 {
     // Additional validation: Ensure all fields are filled
     global $con;
 
+    // Additional validation: Ensure all fields are filled
     foreach ($data as $field => $value) {
         if (empty($value)) {
             return "All fields are required.";
         }
     }
 
+    // Additional validation: Check image file size (in bytes)
+    $maxFileSize = 2 * 1024 * 1024; // 2 MB
+    $uploadedFile = $_FILES['image']['tmp_name'];
+    if ($_FILES['image']['size'] > $maxFileSize) {
+        return "Image file size exceeds the allowed limit.";
+    }
+
+    // Handle image upload
+    $uploadDirectory = 'uploads/';
+    $uploadedFileName = $_FILES['image']['name'];
+    $image = $uploadDirectory . $uploadedFileName;
+
+    if (!move_uploaded_file($uploadedFile, $image)) {
+        return "Error uploading image.";
+    }
+
     // Prepare and execute the SQL query
     $tableRow = implode(', ', array_keys($data));
     $values = ':' . implode(', :', array_keys($data));
+    $values .= ', :image'; // Include the image placeholder
 
-    $sql = "INSERT INTO $table ($tableRow) VALUES ($values)";
+    $sql = "INSERT INTO $table ($tableRow, image) VALUES ($values)";
     $stmt = $con->prepare($sql);
 
     try {
         $stmt->execute($data);
-        echo "Data inserted successfully!";
+        return "Data inserted successfully!";
     } catch (PDOException $e) {
         return "Error inserting data: " . $e->getMessage();
     }
 }
+
+
+
+
+//function insert($table, $data)
+//{
+//    // Additional validation: Ensure all fields are filled
+//    global $con;
+//
+//    foreach ($data as $field => $value) {
+//        if (empty($value)) {
+//            return "All fields are required.";
+//        }
+//    }
+//
+//    // Prepare and execute the SQL query
+//    $tableRow = implode(', ', array_keys($data));
+//    $values = ':' . implode(', :', array_keys($data));
+//
+//    $sql = "INSERT INTO $table ($tableRow) VALUES ($values)";
+//    $stmt = $con->prepare($sql);
+//
+//    try {
+//        $stmt->execute($data);
+//        echo "Data inserted successfully!";
+//    } catch (PDOException $e) {
+//        return "Error inserting data: " . $e->getMessage();
+//    }
+//}
 
 
 

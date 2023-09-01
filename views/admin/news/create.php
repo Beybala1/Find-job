@@ -1,17 +1,17 @@
-<?php include('../views/admin/inc/sidebar.php')  ?>
+<?php include '../views/admin/inc/sidebar.php';  ?>
 <?php
 $title = "Blog yarat";
-require('../views/admin/inc/meta.php');
+include '../views/admin/inc/meta.php';
 ?>
 
 <body>
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar  ">
     <div class="layout-container">
-        <?php include('../views/admin/inc/sidebar.php')  ?>
+        <?php include '../views/admin/inc/sidebar.php';  ?>
         <!-- Layout container -->
         <div class="layout-page">
-            <?php include('../views/admin/inc/header.php')  ?>
+            <?php include '../views/admin/inc/header.php';  ?>
             <!-- Content wrapper -->
             <div class="content-wrapper">
                 <!-- Content -->
@@ -79,6 +79,7 @@ require('../views/admin/inc/meta.php');
                                     $slug = csrf($_POST['slug']);
                                     $alt = csrf($_POST['alt']);
                                     $content = csrf($_POST['content']);
+                                    $image = csrf($_POST['image']);
 
                                     // Call the insert function with the defined variables
                                     $blog = insert(
@@ -88,6 +89,7 @@ require('../views/admin/inc/meta.php');
                                             'slug' => $slug,
                                             'alt' => $alt,
                                             'content' => $content,
+                                            'image' => $image,
                                         ],
                                     );
                                 }
@@ -98,7 +100,7 @@ require('../views/admin/inc/meta.php');
                                         <label class="form-label" for="bs-validation-upload-file">Profile
                                             pic</label>
                                         <input type="file" name="image" accept="image/*" class="form-control" id="bs-validation-upload-file"
-                                                value="1"/>
+                                                />
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="bs-validation-title">Başlıq</label>
@@ -138,7 +140,7 @@ require('../views/admin/inc/meta.php');
 
                 </div>
                 <!-- / Content -->
-                <?php include('../views/admin/inc/footer.php') ?>
+                <?php include '../views/admin/inc/footer.php'; ?>
             </div>
             <!-- Content wrapper -->
         </div>
@@ -150,7 +152,7 @@ require('../views/admin/inc/meta.php');
     <div class="drag-target"></div>
 </div>
 <!-- / Layout wrapper -->
-<?php include('../views/admin/inc/script.php') ?>
+<?php include '../views/admin/inc/script.php'; ?>
 </body>
 
 </html>
